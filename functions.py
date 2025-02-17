@@ -21,3 +21,4 @@ print(is_prime(8))
 def greeting(name):
     return f'Hello {name}, how are you?'
 print(greeting('Jim'))
+

@@ -13,24 +13,37 @@ class ElectricCar(Car):
     def battery_info(self):
         return f'The car is {self.battery_capacity}kWH battery capacity'
 class Person:
-
-    def __init__(self, name, age):
-        self.name = name
-        self.age = age
-
-
-    # def __call__(self):
-    #     self.age = age
-    #     return f'{self.name} updated age: {self.age} years old'
+    def __init__(self,name,age):
+      self.name = name
+      self.age = age
     def introduce(self):
-        self.age += 1
-        return f'Hi, my name is {self.name} and I am {self.age} years old.'
+        return f'Hello, my name is {self.name} I am {self.age} years old'
+class Species(Person):
+   Species="Human"
 
+   def __init__(self, name, age,species):
+       super().__init__(name,age)
+       print(f'Hello my name is {self.name} and I am {self.age} years old. I am {self.Species}')
 
-        return f'I am {self.age} years old.'
-
-
-class Variable_Species(Person):
-    def __init__(self, name, age,human):
-        super().__init__(name, age)
-        self.variable_species = human
+class Employee:
+    def __init__(self, name, age, salary):
+            self.name = name
+            self.age = age
+            self.salary = salary
+    def employee_salary(self):
+            employee_salary = self.salary + 10000
+            return employee_salary
+class FullTimeEmployee(Employee):
+    def __init__(self, name, age, salary, hours_worked):
+        super().__init__(name, age, salary)
+        self.hours_worked = hours_worked
+    def employee_salary(self):
+        employee_salary = self.salary * self.hours_worked + 10000
+        return employee_salary
+class PartTimeEmployee(Employee):
+    def __init__(self, name, age, salary, hours_worked):
+        super().__init__(name,age,salary)
+        self.hours_worked = hours_worked
+    def employee_salary(self):
+        employee_salary = self.salary * self.hours_worked - 5000
+        return employee_salary

@@ -1,5 +1,4 @@
-from classes import Car, ElectricCar, Person, Variable_Species
-
+from classes import Car, ElectricCar,Person,Species,Employee,FullTimeEmployee,PartTimeEmployee
 car1=Car(brand='Honda',model='Vezel',year=2000)
 car2=Car(brand='Audi',model='X',year=2000)
 car3=Car(brand='Mercedez',model='C200',year=2000)
@@ -14,8 +13,32 @@ print(electric_car1.display_info())
 print(electric_car2.battery_info())
 print(electric_car3.display_info())
 print(electric_car4.battery_info())
-p1=Person(name='Alice',age=18)
+p1=Person("Chela",34)
+p2=Person("Mercedez",34)
 print(p1.introduce())
+p1.age=23
 print(p1.introduce())
+s1=Species('Zero','34','Human')
+s2=Species('Eleven','35','Human')
+s1.species="Human"
+print(s1.species)
+
+e1=Employee('Jim',32,100000)
+e2=Employee('Jesse',32,2002020)
+employee_1 = Employee("Derrick", 23,20000)
+print(employee_1.name)
+print(employee_1.age)
+print(employee_1.employee_salary())
+employee_2 = Employee("Bob", 30,20000)
+print(employee_2.name)
+fulltime_1 = FullTimeEmployee("Leonard", 25,20000,14)
+print(fulltime_1.name)
+print(fulltime_1.age)
+print(f'{fulltime_1.employee_salary()} ksh')
+
+parttime_1 = PartTimeEmployee("James", 25,20000,10)
+print(parttime_1.name)
+print(parttime_1.age)
+print(f'{parttime_1.employee_salary()} ksh')
 
 
